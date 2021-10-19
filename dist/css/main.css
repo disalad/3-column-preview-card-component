@@ -96,7 +96,6 @@ main .luxury button {
     grid-template-rows: unset;
     width: 55rem;
     height: 30rem;
-    transform: scale(1.1);
   }
   main section {
     position: relative;
@@ -111,7 +110,7 @@ main .luxury button {
 }
 @media only screen and (min-width: 1400px) {
   main {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
