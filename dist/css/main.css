@@ -1,0 +1,118 @@
+@font-face {
+  font-family: lexend-deca;
+  src: url(../fonts/Lexend_Deca/static/LexendDeca-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: shoulders;
+  src: url(../fonts/Big_Shoulders_Display/static/BigShouldersDisplay-Bold.ttf);
+}
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: #f2f2f2;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 87.5%;
+  overflow: hidden;
+  border-radius: 0.5em;
+  color: #fff;
+  margin: 2em 0;
+}
+main section {
+  padding: 3em 3em;
+}
+main section .title {
+  text-transform: uppercase;
+  color: #f2f2f2;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.25rem;
+  margin: 0.75em 0;
+}
+main section p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+  width: 85%;
+}
+main section button {
+  border: 0.2em solid transparent;
+  background-color: #f2f2f2;
+  border-radius: 5em;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  margin: 1em 0 0 0 !important;
+  transition: 0.2s background, color, border;
+}
+main section button:hover {
+  background-color: transparent;
+  color: white;
+  border: 0.2em solid #fff;
+}
+main section p,
+main section button {
+  font-family: "Lexend Deca", sans-serif;
+}
+main section h1,
+main section p,
+main section button {
+  margin: 1em 0;
+}
+main .sedans {
+  background-color: #e38826;
+}
+main .sedans button {
+  color: #e38826;
+}
+main .suvs {
+  background-color: #006970;
+}
+main .suvs button {
+  color: #006970;
+}
+main .luxury {
+  background-color: #004241;
+}
+main .luxury button {
+  color: #004241;
+}
+
+@media only screen and (min-width: 769px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    width: 55rem;
+    height: 30rem;
+    transform: scale(1.1);
+  }
+  main section {
+    position: relative;
+  }
+  main section p {
+    width: 90%;
+  }
+  main section button {
+    position: absolute;
+    bottom: 9%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  main {
+    transform: scale(1.2);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

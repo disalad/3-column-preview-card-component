@@ -1,0 +1,11 @@
+{
+  "name": "3-column-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "A frontendmentor.io challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "live-server"
+  },
+  "author": "Disala Damsas",
+  "license": "ISC"
+}

@@ -1,0 +1,132 @@
+@use "./variables" as var;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: shoulders;
+  src: url(../fonts/Big_Shoulders_Display/static/BigShouldersDisplay-Bold.ttf);
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  background-color: var.$very-light-gray;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  width: 87.5%;
+  overflow: hidden;
+  border-radius: 0.5em;
+  color: #fff;
+  margin: 2em 0;
+
+  section {
+    padding: 3em 3em;
+
+    .title {
+      text-transform: uppercase;
+      color: var.$very-light-gray;
+      font-family: "Big Shoulders Display", cursive;
+      font-size: 2.25rem;
+      margin: 0.75em 0;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var.$trasparent-white-p;
+      line-height: 1.5;
+      width: 85%;
+    }
+
+    button {
+      border: 0.2em solid transparent;
+      background-color: var.$very-light-gray;
+      border-radius: 5em;
+      padding: 0.75em 1.5em;
+      cursor: pointer;
+      margin: 1em 0 0 0 !important;
+      transition: 0.2s background, color, border;
+
+      &:hover {
+        background-color: transparent;
+        color: white;
+        border: 0.2em solid #fff;
+      }
+    }
+
+    p,
+    button {
+      font-family: "Lexend Deca", sans-serif;
+    }
+
+    h1,
+    p,
+    button {
+      margin: 1em 0;
+    }
+  }
+
+  .sedans {
+    background-color: var.$bright-orange;
+
+    button {
+      color: var.$bright-orange;
+    }
+  }
+
+  .suvs {
+    background-color: var.$dark-cyan;
+
+    button {
+      color: var.$dark-cyan;
+    }
+  }
+
+  .luxury {
+    background-color: var.$very-dark-cyan;
+
+    button {
+      color: var.$very-dark-cyan;
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: unset;
+    width: 55rem;
+    height: 30rem;
+    transform: scale(1.1);
+
+    section {
+      position: relative;
+
+      p {
+        width: 90%;
+      }
+
+      button {
+        position: absolute;
+        bottom: 9%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  main {
+    transform: scale(1.2);
+  }
+}
